@@ -5,7 +5,6 @@ import android.content.Context;
 
 import dagger.BindsInstance;
 import dagger.Component;
-import dagger.Component.*;
 
 
 /*
@@ -20,7 +19,7 @@ public interface Test03_8_Component {
 //    不知道为什么会报错
     @Component.Factory
     interface Factory123 {
-        Test03_8_Component newComponent( @BindsInstance Context context);
+        Test03_8_Component newComponent(@BindsInstance Context context);
     }
 
 }

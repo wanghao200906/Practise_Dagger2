@@ -3,9 +3,6 @@ package com.example.dagger2.test3_8;
 
 import android.app.Application;
 
-import com.example.dagger2.test3_7.DaggerTest03_7_Component;
-import com.example.dagger2.test3_7.Test03_7_Component;
-import com.example.dagger2.test3_7.bean.asd;
 
 /**
  * Created by Sven.Wong on 2019/3/12

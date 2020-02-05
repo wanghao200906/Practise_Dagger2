@@ -10,5 +10,6 @@ import dagger.Component;
 @Component(modules = {ColorModule.class})
 public interface ColorComponent {
 //    必须要提供一个返回值。供依赖ColorComponent的Component使用。
+//    ColorModule的功能就是提供一个Color,所以在ColorComponent里面也要提供这个方法。其他的Component才可以使用
     Color getColor();
 }

@@ -12,6 +12,12 @@ import com.example.dagger2.test4_2.bean.Student;
 import javax.inject.Inject;
 
 
+/*
+单利博客
+https://blog.csdn.net/u010961631/article/details/72625944
+
+
+ */
 public class Test04_2Activity extends AppCompatActivity {
     @Inject
     Student student;

@@ -14,28 +14,28 @@ import dagger.Provides;
 @Module
 public class StudentModule {
 
-//
-//    //    SchooleBag 需要传入一个String类型的参数。所以要在Module中提供一个返回String类型的方法。
-//    @Provides
-//    String getName() {
-//        return "box";
-//    }
-//
-//
-////    直接传入context
-//    @Provides
-//    Student getStudent(Pen pen, SchoolBag schoolBag, Context context) {
-//        return new Student(pen, schoolBag, context);
-//    }
-//
-//
-//    @Provides
-//    Pen getPen() {
-//        return new Pen(getName());
-//    }
-//
-//    @Provides
-//    SchoolBag getSchoolBag(Color color, asd a ) {
-//        return new SchoolBag(getName(), color, getPen());
-//    }
+
+    //    SchooleBag 需要传入一个String类型的参数。所以要在Module中提供一个返回String类型的方法。
+    @Provides
+    String getName() {
+        return "box";
+    }
+
+
+//    直接传入context
+    @Provides
+    Student getStudent(Pen pen, SchoolBag schoolBag, Context context) {
+        return new Student(pen, schoolBag, context);
+    }
+
+
+    @Provides
+    Pen getPen() {
+        return new Pen(getName());
+    }
+
+    @Provides
+    SchoolBag getSchoolBag(Color color ) {
+        return new SchoolBag(getName(), color, getPen());
+    }
 }

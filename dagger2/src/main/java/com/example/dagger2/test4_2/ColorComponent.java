@@ -13,5 +13,5 @@ import dagger.Component;
 @Singleton
 @Component(modules = {ColorModule.class})
 public interface ColorComponent {
-    Color getColor();//注意这里，没有注入方法，只有一个桥接方法，告诉我提供哪些对象
+    Color getColor( );//注意这里，没有注入方法，只有一个桥接方法，告诉我提供哪些对象
 }
