@@ -13,7 +13,8 @@ import dagger.Provides;
 public class StudentModule {
     private Context mContext;
 
-    //   需要给Module传值进来，就得在生命的时候 new
+    //   这个构造函数有参数了。所以要显示的进行添加操作
+    //   需要给Module传值进来，就得在声明的时候 new
     //   DaggerTest03_5Component.builder().studentModule(new StudentModule(this)).build().inject(this);
     public StudentModule(Context context) {
         this.mContext = context;
