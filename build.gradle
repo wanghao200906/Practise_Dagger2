@@ -1,0 +1,76 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    // *** versioning *** //
+    releaseName = "R6"
+    versionBR = ""   // BR: business requirement number.. empty for global
+    versionMajor = 13
+    versionMinor = 1
+    versionPatch = 27
+    versionCode = 201805180
+
+    // *** build settings *** //
+    minSdkVersion = 19
+    targetSdkVersion = 27
+    compileSdkVersion = 27
+    buildToolsVersion = "27.0.3"
+    defaultApplicationId = "com.homecredit.hccn.customerapp"
+    productionApplicationId = "com.hcc.app"
+    testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+
+    // *** dependencies *** //
+    // android & google
+    supportLibraryVersion = '27.1.1'
+    constraintLayoutVersion = '1.0.2'
+    multidexVersion = '1.0.3'
+    googlePlayServicesVersion = '11.8.0'
+    // architecture
+    architectureComponentsVersion = '1.1.1'
+    pagingVersion = '1.0.0-beta1'
+    // testing
+    junitVersion = '4.12'
+    mockitoVersion = '2.13.0'
+    espressoVersion = '3.0.1'
+    espressoRunnerVersion = '1.0.1'
+    // threading & reactive
+    rxJavaVersion = '2.1.5'
+    rxAndroidVersion = '2.0.1'
+    // networking
+    retrofitVersion = '2.1.0'
+    retrofitRxJavaAdapterVersion = '1.0.0'
+    // dependency injection
+    butterKnifeVersion = '8.5.0'
+    daggerVersion = '2.14.1'
+    // tools
+    stethoVersion = '1.5.0'
+    stethoRealmVersion = '2.1.0'
+    quitNowCacheVersion = '1.5.0'
+
+}
+
