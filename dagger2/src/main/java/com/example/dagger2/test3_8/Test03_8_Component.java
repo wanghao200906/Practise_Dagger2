@@ -18,10 +18,10 @@ public interface Test03_8_Component {
 
 
 //    不知道为什么会报错
-//    @Component.Factory
-//    interface Factory123 {
-//        Test03_8_Component newComponent(StudentModule s,ColorModule c,@BindsInstance Context context);
-//    }
+    @Component.Factory
+    interface Factory123 {
+        Test03_8_Component newComponent( @BindsInstance Context context);
+    }
 
 }
 
