@@ -1,4 +1,4 @@
-package com.example.dagger2.test4_2_2.ano;
+package com.example.dagger2.test4_2_3.ano;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
@@ -13,6 +13,6 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Scope
 @Documented
 @Retention(RUNTIME)
-public @interface StudentSingleton2 {
+public @interface StudentSingleton {
 }
 

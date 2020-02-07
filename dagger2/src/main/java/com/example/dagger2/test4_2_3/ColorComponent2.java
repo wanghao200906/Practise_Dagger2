@@ -1,6 +1,6 @@
-package com.example.dagger2.test4_2_2;
+package com.example.dagger2.test4_2_3;
 
-import com.example.dagger2.test4_2_2.bean.Color;
+import com.example.dagger2.test4_2_3.bean.Color;
 
 import javax.inject.Singleton;
 
@@ -14,5 +14,7 @@ import dagger.Component;
 @Component(modules = {ColorModule2.class})
 public interface ColorComponent2 {
         //注意这里，没有注入方法，只有一个桥接方法，告诉我提供哪些对象，不然继承了ColorComponent2的Component 是无法使用Color 的。
-    Color getColor();
+//    要么没有参数只有返回值，
+//    要么有参数返回void
+    Color getColor( );
 }

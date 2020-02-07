@@ -1,20 +1,29 @@
 package com.example.dagger2.test4_2_2;
 
 
-import com.example.dagger2.test4_2.Test04_2Activity;
+
+import android.content.Context;
+
 import com.example.dagger2.test4_2_2.ano.StudentSingleton;
 
 import dagger.Component;
 
-
 /*
-    Test04_2_2Component是StudentSingleton的，ColorComponent2是@Singleton，
-    如果在继承一个StudentComponent2也想让StudentComponent2是单利，该怎么弄。暂时没理解
+    体会@Subcomponent的用法。@Subcomponent还有另一种用法。感觉比较麻烦但是官方推荐。见test4_2_2
+
+    Subcomponent的官方推荐的方法。配合@Module使用
  */
+
+// component 也可以是抽象类，不一定是接口
 @StudentSingleton
-@Component(dependencies = {
-//        StudentComponent2.class,
-        ColorComponent2.class})
-public interface Test04_2_2Component {
-    void inject(Test04_2_2Activity test04_2_2Activity);
+@Component(modules = {StudentModule2.class,RPosActivityModule.class},dependencies = ColorComponent2.class)
+public abstract class Test04_2_2Component {
+    public static Test04_2_2Component init(Context context) {
+        return DaggerTest04_2_2Component.builder().studentModule2(new StudentModule2(context))
+                .colorComponent2(DaggerColorComponent2.builder().build())
+                .build();
+    }
+
+//    Subcomponent的另一种用法。
+    abstract RPosActivityComponent.Fractory getActivity();
 }

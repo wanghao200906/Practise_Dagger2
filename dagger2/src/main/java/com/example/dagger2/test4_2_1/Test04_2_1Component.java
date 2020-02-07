@@ -7,6 +7,10 @@ import com.example.dagger2.test4_2_1.ano.StudentSingleton;
 
 import dagger.Component;
 
+/*
+    体会@Subcomponent的用法。@Subcomponent还有另一种用法。感觉比较麻烦但是官方推荐。见test4_2_1_1
+ */
+
 // component 也可以是抽象类，不一定是接口
 @StudentSingleton
 @Component(modules = {StudentModule2.class},dependencies = ColorComponent2.class)

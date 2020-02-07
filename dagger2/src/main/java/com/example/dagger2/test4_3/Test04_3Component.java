@@ -12,4 +12,5 @@ import dagger.Subcomponent;
 @Subcomponent(modules = {StudentModule.class})
 public interface Test04_3Component {
     void inject(Test04_3Activity test031Activity);
+    void inject(Test04_3Activity2 test031Activity);
 }

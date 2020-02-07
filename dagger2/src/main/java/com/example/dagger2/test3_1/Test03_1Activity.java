@@ -23,7 +23,9 @@ public class Test03_1Activity extends AppCompatActivity {
 //        DaggerTest03_1Component.create().inject(this);
 //        DaggerTest03_1Component.builder().studentModule(new StudentModule()).build().inject(this);
 
-        Toast.makeText(this, student.study(), Toast.LENGTH_SHORT).show();
+
+        Student student = DaggerTest03_1Component.builder().build().getStudent();
+        Toast.makeText(this, this.student.study(), Toast.LENGTH_SHORT).show();
 
     }
 }

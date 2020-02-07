@@ -1,4 +1,5 @@
-package com.example.dagger2.test4_2_2.bean;
+package com.example.dagger2.test4_2_3.bean;
+
 
 import android.content.Context;
 

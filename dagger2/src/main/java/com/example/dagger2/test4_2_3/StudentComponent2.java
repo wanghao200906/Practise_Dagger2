@@ -1,6 +1,6 @@
-package com.example.dagger2.test4_2_2;
+package com.example.dagger2.test4_2_3;
 
-import com.example.dagger2.test4_2_2.bean.Student;
+import com.example.dagger2.test4_2_3.bean.Student;
 
 
 import javax.inject.Singleton;

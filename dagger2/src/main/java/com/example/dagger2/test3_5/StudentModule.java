@@ -26,6 +26,7 @@ public class StudentModule {
         return "box";
     }
 
+    //Pen和SchoolBag都没有被inject了，所以需要在@Provides中提供
     @Provides
     Student getStudent(Pen pen, SchoolBag schoolBag) {
         return new Student(pen, schoolBag, mContext);

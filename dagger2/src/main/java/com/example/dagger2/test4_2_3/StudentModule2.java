@@ -1,11 +1,13 @@
-package com.example.dagger2.test4_2_2;
+package com.example.dagger2.test4_2_3;
 
 import android.content.Context;
 
-import com.example.dagger2.test4_2_2.bean.Color;
-import com.example.dagger2.test4_2_2.bean.Pen;
-import com.example.dagger2.test4_2_2.bean.SchoolBag;
-import com.example.dagger2.test4_2_2.bean.Student;
+import com.example.dagger2.test4_2_3.bean.Color;
+import com.example.dagger2.test4_2_3.bean.Pen;
+import com.example.dagger2.test4_2_3.bean.SchoolBag;
+import com.example.dagger2.test4_2_3.bean.Student;
+
+import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
@@ -24,20 +26,22 @@ public class StudentModule2 {
         return "box";
     }
 
-    @Provides
-    String getName2() {
-        return "box2";
-    }
+    //
+//    @Provides
+//    Student getStudent(Pen pen, SchoolBag schoolBag) {
+//        return new Student(pen, schoolBag, mContext);
+//    }
 
+    @Singleton
     @Provides
-    Student getStudent(Pen pen, SchoolBag schoolBag) {
-        return new Student(pen, schoolBag, mContext);
+    Student getStudent2() {
+        return null;
     }
 
 
     @Provides
     Pen getPen() {
-        return new Pen(getName2());
+        return new Pen(getName());
     }
 
     @Provides
