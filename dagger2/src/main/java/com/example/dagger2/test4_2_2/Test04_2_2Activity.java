@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.example.dagger2.R;
-import com.example.dagger2.test4_2_1.DaggerTest04_2_1Component;
 import com.example.dagger2.test4_2_2.bean.Color;
 import com.example.dagger2.test4_2_2.bean.Student;
 
