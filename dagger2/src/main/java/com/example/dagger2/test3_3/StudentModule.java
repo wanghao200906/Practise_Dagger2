@@ -9,7 +9,7 @@ import dagger.Provides;
 
 @Module
 public class StudentModule {
-
+//Pen和SchoolBag都被inject了
     @Provides
     Student getStudent(Pen pen, SchoolBag schoolBag) {
         return new Student(pen,schoolBag);

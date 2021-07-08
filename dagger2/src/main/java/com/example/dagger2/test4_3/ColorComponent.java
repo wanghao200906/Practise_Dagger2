@@ -14,5 +14,7 @@ import dagger.Component;
 @Singleton
 @Component(modules = {ColorModule.class})
 public interface ColorComponent {
+
+//    Test04_3Component是 Subcomponent 的
     Test04_3Component getTest04_3Component(StudentModule studentModule);
 }

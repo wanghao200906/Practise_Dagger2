@@ -35,7 +35,6 @@ public class StudentModule2 {
     }
 
 
-
     @Provides
     Pen getPen() {
         return new Pen(getName2());

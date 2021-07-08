@@ -36,7 +36,11 @@ public class Test04_1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+//
+//        if (result.getValue() != null) {
+////            remove flc
+//            result.getValue().remove(0);
+//        }
 
 //        两种方法都可以
         DaggerTest04_1Component.builder().studentModule(new StudentModule(this))

@@ -40,6 +40,8 @@ public class Test04_2_1Activity extends AppCompatActivity {
 //
 //
 //      方法2
+//        getActivity是@Subcomponent的方法，需要通过父Component也就是DaggerTest04_2_1Component
+//        来一步一步的调用
         DaggerTest04_2_1Component.init(this).getActivity().inject(this);
 
         Toast.makeText(this, student.study(), Toast.LENGTH_SHORT).show();
